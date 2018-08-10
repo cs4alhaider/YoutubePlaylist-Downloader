@@ -18,7 +18,8 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
+        title = playlistName
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,15 +29,14 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
         //allow swipe left to right to go back
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     //stop video play when navigating back to playlist list
     var stopVid : Bool!
-    override func viewWillDisappear(_ animated: Bool)
-    {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if(self.isMovingFromParentViewController || self.isBeingDismissed){
             stopVid = true

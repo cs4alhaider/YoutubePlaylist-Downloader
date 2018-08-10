@@ -41,4 +41,10 @@ extension UIViewController {
         alertController.addAction(otherAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    // to change the back bar button title for subViewControllers
+    func setBackButtonTitle(_ stringToUse: String){
+        let backButton = UIBarButtonItem(title: stringToUse, style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+    }
 }

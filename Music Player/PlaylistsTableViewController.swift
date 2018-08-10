@@ -42,10 +42,21 @@ class PlaylistsTableViewController: UITableViewController {
         refreshPlaylists()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.setBackButtonTitle("")
+//        if #available(iOS 11.0, *) {
+//            self.navigationController?.navigationBar.prefersLargeTitles = false
+//        }
     }
-    
+
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if #available(iOS 11.0, *) {
+//            self.navigationController?.navigationBar.prefersLargeTitles = true
+//        }
+//    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlistNames.count
     }
@@ -89,24 +100,39 @@ class PlaylistsTableViewController: UITableViewController {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Playlist")
         request.sortDescriptors = [playlistSortDescriptor]
         
-        playlists = try? context.fetch(request) as NSArray!
+        playlists = try! context.fetch(request) as NSArray?
         for playlist in playlists{
             let playlistName = (playlist as AnyObject).value(forKey: "playlistName") as! String
             playlistNames += [playlistName]
         }
-        
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     
     //swipe to delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            let row = indexPath.row
-            let playlistName = (playlists[row] as AnyObject).value(forKey: "playlistName") as! String
-            deletePlaylist(playlistName)
-            refreshPlaylists()
+        if editingStyle == .delete {
+            delete(at: indexPath)
         }
+    }
+    
+    fileprivate func delete(at indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Warning",
+                                      message: "Are you sure you want to delete this playlist and all the songs in it ?",
+                                      preferredStyle: .actionSheet)
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            let row = indexPath.row
+            let playlistName = (self.playlists[row] as AnyObject).value(forKey: "playlistName") as! String
+            self.deletePlaylist(playlistName)
+            self.refreshPlaylists()
+        }
+        let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        present(alert, animated: true, completion: nil)
     }
     
     //delete playlist and all songs in it

@@ -17,10 +17,12 @@
                 <tabBarController storyboardIdentifier="tabBarController" id="nfX-Dt-vOK" customClass="TabBarController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1Mc-cb-5j5"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="fEX-lI-NPM">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="fEX-lI-NPM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="h7f-OS-HRe" kind="relationship" relationship="viewControllers" id="0Rx-8W-m9Z"/>
@@ -29,14 +31,14 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIm-3j-r0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-213"/>
+            <point key="canvasLocation" x="682" y="-677"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="9Pk-jp-AAT">
             <objects>
                 <tableViewController id="Mzs-fZ-jAu" customClass="Playlist" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="86" sectionHeaderHeight="10" sectionFooterHeight="10" id="6XD-mC-Bfd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="438"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="513"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -162,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhi-MA-fNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3421.5999999999999" y="-808.37438423645324"/>
+            <point key="canvasLocation" x="3551" y="-816"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="2B0-Yy-Frq">
@@ -176,16 +178,16 @@
         <scene sceneID="Wck-Fi-fxK">
             <objects>
                 <tableViewController id="5sr-0O-RPC" customClass="PlaylistsTableViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="t1h-Ke-OyZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="t1h-Ke-OyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="playlistCell" id="E5i-jN-OUa">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="playlistCell" rowHeight="65" id="E5i-jN-OUa">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E5i-jN-OUa" id="eS6-pN-Ejz">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="64.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,7 +211,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbo-sG-gCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-1702"/>
+            <point key="canvasLocation" x="2356" y="-1702.4630541871923"/>
         </scene>
         <!--Playlist View Controller-->
         <scene sceneID="VuV-cl-Iou">
@@ -220,32 +222,32 @@
                         <viewControllerLayoutGuide type="bottom" id="kkO-pP-xSK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KGa-xf-M5t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-YF-TMI">
-                                <rect key="frame" x="0.0" y="291" width="375" height="438"/>
-                                <connections>
-                                    <segue destination="Ab2-ns-uI0" kind="embed" identifier="showPlaylist" id="aUH-ar-gjB"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-2X-q46">
-                                <rect key="frame" x="0.0" y="88" width="375" height="203"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128.33333333333334"/>
                                 <connections>
                                     <segue destination="0Af-T0-k7Q" kind="embed" identifier="showPlayer" id="X2F-rm-gft"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-YF-TMI">
+                                <rect key="frame" x="0.0" y="128" width="375" height="513"/>
+                                <connections>
+                                    <segue destination="Ab2-ns-uI0" kind="embed" identifier="showPlaylist" id="aUH-ar-gjB"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4jQ-YF-TMI" secondAttribute="trailing" id="04d-im-Urc"/>
+                            <constraint firstAttribute="bottom" secondItem="4jQ-YF-TMI" secondAttribute="bottom" id="RRU-nP-wdj"/>
                             <constraint firstItem="dOM-2X-q46" firstAttribute="top" secondItem="M83-v4-xvJ" secondAttribute="bottom" id="TQ5-u9-cqQ"/>
-                            <constraint firstItem="kkO-pP-xSK" firstAttribute="top" secondItem="4jQ-YF-TMI" secondAttribute="bottom" id="UQt-4c-P1X"/>
+                            <constraint firstItem="4jQ-YF-TMI" firstAttribute="leading" secondItem="KGa-xf-M5t" secondAttribute="leading" id="Zc6-Dm-bek"/>
                             <constraint firstItem="dOM-2X-q46" firstAttribute="leading" secondItem="KGa-xf-M5t" secondAttribute="leading" id="dt3-8R-484"/>
-                            <constraint firstItem="4jQ-YF-TMI" firstAttribute="top" secondItem="dOM-2X-q46" secondAttribute="bottom" id="hJv-sC-WnC"/>
-                            <constraint firstItem="4jQ-YF-TMI" firstAttribute="leading" secondItem="KGa-xf-M5t" secondAttribute="leading" id="qMZ-Ut-wOG"/>
+                            <constraint firstItem="4jQ-YF-TMI" firstAttribute="top" secondItem="dOM-2X-q46" secondAttribute="bottom" id="ob4-LN-NvX"/>
+                            <constraint firstAttribute="trailing" secondItem="4jQ-YF-TMI" secondAttribute="trailing" id="rHi-ZR-ApQ"/>
                             <constraint firstAttribute="trailing" secondItem="dOM-2X-q46" secondAttribute="trailing" id="smx-ox-9ge"/>
-                            <constraint firstItem="dOM-2X-q46" firstAttribute="height" secondItem="KGa-xf-M5t" secondAttribute="height" multiplier="0.25" id="yUR-C1-WSt"/>
+                            <constraint firstItem="dOM-2X-q46" firstAttribute="height" secondItem="KGa-xf-M5t" secondAttribute="height" multiplier="0.2" id="yUR-C1-WSt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -255,16 +257,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf2-mq-AvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3193" y="-1702"/>
+            <point key="canvasLocation" x="3159.1999999999998" y="-1814.0394088669952"/>
         </scene>
         <!--Playlists-->
         <scene sceneID="kyB-Mf-8hV">
             <objects>
                 <navigationController id="h7f-OS-HRe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Playlists" image="video.png" id="kd5-ZN-Pxy"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aQC-iw-tfO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aQC-iw-tfO">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="5sr-0O-RPC" kind="relationship" relationship="rootViewController" id="eNR-zh-wTf"/>
@@ -279,7 +282,7 @@
             <objects>
                 <tableViewController id="247-Kv-uP9" customClass="Settings" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ntR-iT-vga">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -399,14 +402,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAW-3B-MvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3308" y="551"/>
+            <point key="canvasLocation" x="3188" y="-148"/>
         </scene>
         <!--Downloads-->
         <scene sceneID="a3i-cY-CRc">
             <objects>
                 <tableViewController id="Q5m-0J-m7K" customClass="downloadTableViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="82" sectionHeaderHeight="10" sectionFooterHeight="10" id="qAB-vY-kLg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -417,30 +420,51 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="81.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-lP-gjn">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-lP-gjn">
                                             <rect key="frame" x="8" y="11" width="90" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="7Un-vT-VDh"/>
+                                                <constraint firstAttribute="width" constant="90" id="Aac-Zv-o6H"/>
+                                            </constraints>
                                         </imageView>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jid-D2-xA4">
-                                            <rect key="frame" x="106" y="40" width="162" height="2"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </progressView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Initializing download... " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRX-qw-41Q">
-                                            <rect key="frame" x="106" y="11" width="162" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-0C-JGk">
-                                            <rect key="frame" x="11" y="53" width="84" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-0C-JGk">
+                                            <rect key="frame" x="8" y="51" width="90" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="4sz-4Q-SJN"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KzH-dO-qab">
+                                            <rect key="frame" x="106" y="16" width="245" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing download... " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRX-qw-41Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jid-D2-xA4">
+                                                    <rect key="frame" x="0.0" y="48" width="162" height="2"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="U8c-dK-JZQ"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KzH-dO-qab" firstAttribute="centerY" secondItem="DWx-lP-gjn" secondAttribute="centerY" id="3s3-Bn-049"/>
+                                        <constraint firstItem="eV3-0C-JGk" firstAttribute="bottom" secondItem="DWx-lP-gjn" secondAttribute="bottom" constant="-5" id="Dle-Nk-fgJ"/>
+                                        <constraint firstItem="DWx-lP-gjn" firstAttribute="centerY" secondItem="bSb-QP-qxp" secondAttribute="centerY" id="F2b-Bu-g06"/>
+                                        <constraint firstItem="eV3-0C-JGk" firstAttribute="leading" secondItem="DWx-lP-gjn" secondAttribute="leading" id="RhH-oA-1D1"/>
+                                        <constraint firstItem="eV3-0C-JGk" firstAttribute="trailing" secondItem="DWx-lP-gjn" secondAttribute="trailing" id="VL4-2Q-z5N"/>
+                                        <constraint firstItem="KzH-dO-qab" firstAttribute="leading" secondItem="DWx-lP-gjn" secondAttribute="trailing" constant="8" id="hrI-ny-Pwm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KzH-dO-qab" secondAttribute="trailing" constant="8" id="qM3-rO-If4"/>
+                                        <constraint firstItem="DWx-lP-gjn" firstAttribute="leading" secondItem="bSb-QP-qxp" secondAttribute="leading" constant="8" id="sgd-xO-m5b"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -458,7 +482,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Downloads" id="mlh-H0-P4H">
                         <barButtonItem key="backBarButtonItem" title=" " id="qYP-Bu-n4M"/>
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="f3R-zS-jDD">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="f3R-zS-jDD">
                             <connections>
                                 <segue destination="247-Kv-uP9" kind="show" id="0ii-Ro-0hA"/>
                             </connections>
@@ -467,7 +491,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqh-SL-JqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559" y="551"/>
+            <point key="canvasLocation" x="2437.5" y="-148"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="zSr-RI-K1K">
@@ -481,7 +505,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dqf-jq-HxC">
-                        <rect key="frame" x="0.0" y="394" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="469" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -490,7 +514,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeX-e2-mhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="-827"/>
+            <point key="canvasLocation" x="2818" y="-816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ijH-WM-FQ8">
@@ -498,9 +522,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XV7-dE-mCo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="Hcz-Mg-jfW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x7N-wB-HxD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="x7N-wB-HxD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -509,7 +534,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lO-R7-eIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="551"/>
+            <point key="canvasLocation" x="1662" y="-148"/>
         </scene>
         <!--Item-->
         <scene sceneID="CXG-gp-h5W">
@@ -520,7 +545,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fEg-v2-l8I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dhT-su-17v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -528,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74t-KO-6PU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4032" y="-1823"/>
+            <point key="canvasLocation" x="4003" y="-1814"/>
         </scene>
     </scenes>
     <resources>

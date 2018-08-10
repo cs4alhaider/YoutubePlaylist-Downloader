@@ -32,6 +32,7 @@
 		B093A2A61C34429D00AC86C0 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093A2A51C34429D00AC86C0 /* DownloadManager.swift */; };
 		B0DA10EC1C3804AC009BE745 /* PlaylistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA10EB1C3804AC009BE745 /* PlaylistsTableViewController.swift */; };
 		B0DA10F11C380833009BE745 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA10F01C380833009BE745 /* UIViewController+Alert.swift */; };
+		CA1959D4211E48040064CDA0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1959D3211E48040064CDA0 /* UIView.swift */; };
 		D2253AA71C39EFE00057767C /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2253AA61C39EFE00057767C /* PlaylistViewController.swift */; };
 		D2253AA91C3A36970057767C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2253AA81C3A36970057767C /* TabBarController.swift */; };
 		D2392EDF1C3757E5004AD31C /* MenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2392EDE1C3757E5004AD31C /* MenuAction.swift */; };
@@ -82,6 +83,7 @@
 		B093A2A51C34429D00AC86C0 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		B0DA10EB1C3804AC009BE745 /* PlaylistsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistsTableViewController.swift; sourceTree = "<group>"; };
 		B0DA10F01C380833009BE745 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		CA1959D3211E48040064CDA0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CC4DEA411428B95B5F3B017C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2253AA61C39EFE00057767C /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		D2253AA81C3A36970057767C /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				B0DA10F01C380833009BE745 /* UIViewController+Alert.swift */,
 				D244D1C51C79858300A7E5B5 /* AVAssetAudio.swift */,
+				CA1959D3211E48040064CDA0 /* UIView.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -309,7 +312,6 @@
 				22433FD21B47212F00C075FF /* Frameworks */,
 				22433FD31B47212F00C075FF /* Resources */,
 				A3CCF5E1D4A984E44DD05345 /* [CP] Embed Pods Frameworks */,
-				2886A2EF78982119339BC291 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,7 +335,7 @@
 				TargetAttributes = {
 					22433FD41B47212F00C075FF = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = EJA9W9EPZD;
+						DevelopmentTeam = G69L3HCQBT;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -379,21 +381,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2886A2EF78982119339BC291 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Player/Pods-Music Player-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A3CCF5E1D4A984E44DD05345 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,12 +388,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Music Player/Pods-Music Player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Helper4Swift/Helper4Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XCDYouTubeKit/XCDYouTubeKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Helper4Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCDYouTubeKit.framework",
@@ -457,6 +446,7 @@
 				224340041B47260500C075FF /* DownloadCell.swift in Sources */,
 				D29E202A1CA4E23E0079A261 /* DownloadDataStructures.swift in Sources */,
 				B093A2A61C34429D00AC86C0 /* DownloadManager.swift in Sources */,
+				CA1959D4211E48040064CDA0 /* UIView.swift in Sources */,
 				B093A2A21C3424D000AC86C0 /* SearchWebViewController.swift in Sources */,
 				22433FDB1B47212F00C075FF /* AppDelegate.swift in Sources */,
 				B0DA10EC1C3804AC009BE745 /* PlaylistsTableViewController.swift in Sources */,
@@ -604,10 +594,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EJA9W9EPZD;
+				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samuelechu.Music-Player";
+				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -625,10 +615,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EJA9W9EPZD;
+				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samuelechu.Music-Player";
+				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.MusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
