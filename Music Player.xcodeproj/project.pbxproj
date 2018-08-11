@@ -46,6 +46,7 @@
 		D2B048EC1C2BAA8400E45E96 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B048CC1C2BA74200E45E96 /* JavaScriptCore.framework */; };
 		D2B048ED1C2BAA8400E45E96 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2263AA21C14F06900F07C90 /* MediaPlayer.framework */; };
 		D2B7DA5A1C349BDB0018106A /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = D2B7DA591C349BDB0018106A /* Screenshots */; };
+		E8D302B1211E7A7B00E9EF66 /* PlaylistsTableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D302B0211E7A7B00E9EF66 /* PlaylistsTableViewCustomCell.swift */; };
 		F8B2A66F1977242BAB1B3A1F /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D12DEA9445E6B44FE1061C /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		D2B048CC1C2BA74200E45E96 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/PrivateFrameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		D2B7DA591C349BDB0018106A /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Screenshots; path = Images/Screenshots; sourceTree = "<group>"; };
 		E4D12DEA9445E6B44FE1061C /* Pods_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D302B0211E7A7B00E9EF66 /* PlaylistsTableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsTableViewCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			children = (
 				D2A1F8D91CA0C4CC00F4ED53 /* PlaylistProtocols.swift */,
 				B0DA10EB1C3804AC009BE745 /* PlaylistsTableViewController.swift */,
+				E8D302B0211E7A7B00E9EF66 /* PlaylistsTableViewCustomCell.swift */,
 				D2253AA61C39EFE00057767C /* PlaylistViewController.swift */,
 				22CB59E31B4EE65B001BD2AA /* Playlist.swift */,
 				225F06111B613BB6005D0DEA /* Player.swift */,
@@ -330,7 +333,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Sem;
 				TargetAttributes = {
 					22433FD41B47212F00C075FF = {
@@ -432,6 +435,7 @@
 			files = (
 				2291DEE01B6F2CD500DEF0E8 /* SongCell.swift in Sources */,
 				224340081B472FB800C075FF /* DataDownloader.swift in Sources */,
+				E8D302B1211E7A7B00E9EF66 /* PlaylistsTableViewCustomCell.swift in Sources */,
 				D244D1C61C79858300A7E5B5 /* AVAssetAudio.swift in Sources */,
 				22433FDE1B47212F00C075FF /* Music_Player.xcdatamodeld in Sources */,
 				D2A23C6D1C784A6E00A9F644 /* SongManager.swift in Sources */,
@@ -491,12 +495,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -548,12 +554,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -30,14 +30,15 @@ class PlaylistsTableViewController: UITableViewController {
         let appDel = UIApplication.shared.delegate as? AppDelegate
         context = appDel!.managedObjectContext
         
+        setCellHeight()
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.isScrollEnabled = false 
         //set background image
-        tableView.backgroundColor = UIColor.clear
-        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
-        imgView.frame = tableView.frame
-        tableView.backgroundView = imgView
+        tableView.backgroundColor = UIColor.white
+//        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
+//        imgView.frame = tableView.frame
+//        tableView.backgroundView = imgView
         
         refreshPlaylists()
     }
@@ -45,17 +46,26 @@ class PlaylistsTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.setBackButtonTitle("")
-//        if #available(iOS 11.0, *) {
-//            self.navigationController?.navigationBar.prefersLargeTitles = false
-//        }
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = false
+        }
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if #available(iOS 11.0, *) {
-//            self.navigationController?.navigationBar.prefersLargeTitles = true
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
+    }
+    
+    fileprivate func setCellHeight() {
+        
+        var screenHeight: CGFloat {
+            return UIScreen.main.bounds.height
+        }
+        let height = screenHeight * 0.72
+        tableView.rowHeight = height / 2
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlistNames.count
@@ -63,8 +73,9 @@ class PlaylistsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "playlistCell")! as UITableViewCell
-        cell.textLabel?.text = playlistNames[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playlistCell") as! PlaylistsTableViewCustomCell
+        //cell.textLabel?.text = playlistNames[indexPath.row]
+        cell.playlistTitle?.text = playlistNames[indexPath.row]
         return cell
     }
     
