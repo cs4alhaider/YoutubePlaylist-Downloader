@@ -27,6 +27,7 @@ class Settings: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 44
+        tableView.isScrollEnabled = false
         
         let appDel = UIApplication.shared.delegate as? AppDelegate
         context = appDel!.managedObjectContext

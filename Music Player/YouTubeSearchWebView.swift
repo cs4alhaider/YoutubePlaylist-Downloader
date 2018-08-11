@@ -8,8 +8,7 @@
 
 import UIKit
 import WebKit
-import SnapKit
-
+import Helper4Swift
 
 protocol YouTubeSearchWebViewDelegate {
     func didTapDownloadButton(_ url: URL)
@@ -78,19 +77,18 @@ class YouTubeSearchWebView: WKWebView {
     fileprivate func addDownloadButton() {
         downloadButton.setTitle("↓", for: UIControlState())
         downloadButton.setTitleColor(UIColor.white, for: UIControlState())
-        downloadButton.titleLabel?.font = UIFont(name: "HiraKakuProN-W6", size: 20)!
+        downloadButton.titleLabel?.font = UIFont(name: "HiraKakuProN-W6", size: 30)!
         disableButton()
         
         // add
-        let btnSize: CGFloat = 44
-        let margin: CGFloat = 12
-        downloadButton.layer.cornerRadius = btnSize / 2
         addSubview(downloadButton)
-        downloadButton.snp.makeConstraints { make in
-            _ = make.size.equalTo(btnSize)
-            _ = make.right.equalTo(self).offset(-margin)
-            _ = make.bottom.equalTo(self).offset(-margin)
-        }
+        downloadButton.anchor(height: 65, width: 65,
+                              bottom: bottomAnchor,
+                              right: rightAnchor,
+                              bottomConstant: 30,
+                              rightConstant: 30)
+        downloadButton.clipsToBounds = true
+        downloadButton.layer.cornerRadius = 32.5
 
         downloadButton.addTarget(self, action: #selector(YouTubeSearchWebView.didTapDownloadButton), for: .touchUpInside)
     }
@@ -98,12 +96,20 @@ class YouTubeSearchWebView: WKWebView {
     fileprivate func disableButton() {
         downloadButton.isEnabled = false
         downloadButton.backgroundColor = UIColor.gray
-        downloadButton.alpha = 0.1
+        downloadButton.alpha = 0.2
+        downloadButton.layer.shadowColor = UIColor.clear.cgColor
     }
 
     fileprivate func enableButton() {
         downloadButton.isEnabled = true
-        downloadButton.backgroundColor = UIColor.red
+        downloadButton.applyButtonDesign(title: "↓",
+                                         titleColor: .white,
+                                         cornerRadius: 32.5,
+                                         backgroundColor: UIColor.red,
+                                         shadowColor: .darkGray,
+                                         shadowRadius: 10,
+                                         shadowOpacity: 3)
+        
         UIView.animate(withDuration: 0.2, animations: { self.downloadButton.alpha = 1 }) 
     }
     
