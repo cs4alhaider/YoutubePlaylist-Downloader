@@ -45,7 +45,7 @@ class PlaylistsTableViewCustomCell: UITableViewCell {
         if #available(iOS 11.0, *) {
             visuallEffectView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         }
-        backView.applyViewDesign(masksToBounds: false, color: .black, cornerRadius: 12, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 8)
+        backView.applyViewDesign(masksToBounds: false, color: .black, cornerRadius: 12, opacity: 0.3, offSet: CGSize(width: 0, height: 0), radius: 12)
     }
 
 }

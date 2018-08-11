@@ -109,10 +109,10 @@ class Playlist: UITableViewController, UISearchResultsUpdating, PlaylistDelegate
         }
         
         //set background image
-        tableView.backgroundColor = UIColor.clear
-        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
-        imgView.frame = tableView.frame
-        tableView.backgroundView = imgView
+        tableView.backgroundColor = UIColor.white
+//        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
+//        imgView.frame = tableView.frame
+//        tableView.backgroundView = imgView
         
         //initialize shuffle, select, and delete buttons
         
@@ -277,9 +277,8 @@ class Playlist: UITableViewController, UISearchResultsUpdating, PlaylistDelegate
         cell.backgroundColor = UIColor.clear
         return cell
     }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if songs != nil{
             if resultSearchController.isActive && resultSearchController.searchBar.text != ""{

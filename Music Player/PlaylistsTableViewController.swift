@@ -33,7 +33,6 @@ class PlaylistsTableViewController: UITableViewController {
         setCellHeight()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.isScrollEnabled = false 
         //set background image
         tableView.backgroundColor = UIColor.white
 //        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
@@ -60,11 +59,12 @@ class PlaylistsTableViewController: UITableViewController {
     
     fileprivate func setCellHeight() {
         
-        var screenHeight: CGFloat {
-            return UIScreen.main.bounds.height
-        }
-        let height = screenHeight * 0.72
-        tableView.rowHeight = height / 2
+//        var screenHeight: CGFloat {
+//            return UIScreen.main.bounds.height
+//        }
+//        let height = screenHeight * 0.72
+//        tableView.rowHeight = height / 2
+        tableView.rowHeight = 220
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +74,7 @@ class PlaylistsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playlistCell") as! PlaylistsTableViewCustomCell
-        //cell.textLabel?.text = playlistNames[indexPath.row]
+//        cell.textLabel?.text = 
         cell.playlistTitle?.text = playlistNames[indexPath.row]
         return cell
     }

@@ -23,6 +23,16 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class downloadTableViewController: UITableViewController, downloadTableViewControllerDelegate {
     
+    fileprivate lazy var emptyLable: UILabel = {
+        let lable = UILabel()
+        lable.textAlignment = .center
+        lable.font = UIFont.boldSystemFont(ofSize: 25)
+        lable.text = "Nothing to download."
+        lable.numberOfLines = 0
+        lable.alpha = 0.4
+        lable.translatesAutoresizingMaskIntoConstraints = false
+        return lable
+    }()
     
     var downloadCells: [DownloadCellInfo] = []
      
@@ -59,10 +69,15 @@ class downloadTableViewController: UITableViewController, downloadTableViewContr
         
         NotificationCenter.default.addObserver(self, selector: #selector(downloadTableViewController.resetDownloadTasks(_:)), name: NSNotification.Name(rawValue: "resetDownloadTasksID"), object: nil)
         
-        tableView.backgroundColor = UIColor.clear
-        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
-        imgView.frame = tableView.frame
-        tableView.backgroundView = imgView
+        tableView.backgroundColor = UIColor.white
+//        let imgView = UIImageView(image: UIImage(named: "pastel.jpg"))
+//        imgView.frame = tableView.frame
+//        tableView.backgroundView = imgView
+        
+        view.addSubview(emptyLable)
+        //emptyLable.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        emptyLable.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        emptyLable.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     @objc func hideTabBar(){
@@ -150,6 +165,11 @@ class downloadTableViewController: UITableViewController, downloadTableViewContr
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if downloadCells.count <= 0 {
+            emptyLable.isHidden = false
+        }else {
+            emptyLable.isHidden = true
+        }
         return downloadCells.count
     }
     

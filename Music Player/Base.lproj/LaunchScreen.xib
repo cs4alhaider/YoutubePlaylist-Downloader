@@ -15,22 +15,39 @@
             <rect key="frame" x="0.0" y="0.0" width="449" height="767"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kSu-w1-kB2">
-                    <rect key="frame" x="99" y="238.66666666666663" width="250" height="250"/>
+                <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kSu-w1-kB2">
+                    <rect key="frame" x="124" y="253.66666666666663" width="200" height="200"/>
+                    <color key="tintColor" red="1" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="250" id="RrN-sJ-opA"/>
-                        <constraint firstAttribute="height" constant="250" id="UoY-oO-edQ"/>
+                        <constraint firstAttribute="width" constant="200" id="RrN-sJ-opA"/>
+                        <constraint firstAttribute="height" constant="200" id="UoY-oO-edQ"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with ❤️ by Abdullah Alhaider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rza-eh-zwb">
+                    <rect key="frame" x="99.666666666666671" y="717.33333333333337" width="249.66666666666663" height="19.666666666666629"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0K-Z3-aPR">
+                    <rect key="frame" x="158" y="443.66666666666669" width="133" height="32"/>
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="m0K-Z3-aPR" firstAttribute="top" secondItem="kSu-w1-kB2" secondAttribute="bottom" constant="-10" id="Mth-8O-8hX"/>
+                <constraint firstItem="rza-eh-zwb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NW7-VX-tDZ"/>
                 <constraint firstItem="kSu-w1-kB2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OIV-9U-GDx"/>
-                <constraint firstItem="kSu-w1-kB2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="ShW-7n-32c"/>
+                <constraint firstItem="m0K-Z3-aPR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="P9E-VF-gIp"/>
+                <constraint firstItem="kSu-w1-kB2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="ShW-7n-32c"/>
+                <constraint firstAttribute="bottom" secondItem="rza-eh-zwb" secondAttribute="bottom" constant="30" id="XWu-62-XfI"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="347" y="399"/>
+            <point key="canvasLocation" x="346.5" y="398.5"/>
         </view>
     </objects>
     <resources>

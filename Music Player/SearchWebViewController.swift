@@ -9,10 +9,9 @@
 import UIKit
 import WebKit
 
-class SearchWebViewController: UIViewController, YouTubeSearchWebViewDelegate {
+class SearchWebViewController: UIViewController {
     
     let webView: YouTubeSearchWebView
-    
     var downloadManager: DownloadManager!
     
     // Please Call
@@ -40,6 +39,12 @@ class SearchWebViewController: UIViewController, YouTubeSearchWebViewDelegate {
     
     fileprivate func setup() {
         webView.delegate = self
+        title = "YouTube"
+    }
+    
+    fileprivate func youtubeReq() {
+        let req = URLRequest(url: URL(string:"https://www.youtube.com")!)
+        webView.load(req)
     }
     
     override func viewDidLoad() {
@@ -47,14 +52,20 @@ class SearchWebViewController: UIViewController, YouTubeSearchWebViewDelegate {
         // Adding webView
         view.addSubview(webView)
         webView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
-        
-        let req = URLRequest(url: URL(string:"https://www.youtube.com")!)
-        webView.load(req)
+        youtubeReq()
     }
     
     // MARK: YouTubeSearchWebViewDelegate
     func didTapDownloadButton(_ url: URL) {
         downloadManager.startDownloadVideoOrPlaylist(url: url.absoluteString)
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "downloadTableViewController") as! downloadTableViewController
+//        self.present(newViewController, animated: true, completion: nil)
         _ = self.navigationController?.popViewController(animated: true)
     }
+}
+
+extension SearchWebViewController: YouTubeSearchWebViewDelegate {
+    
+    
 }
