@@ -10,10 +10,20 @@ import UIKit
 
 extension UIView {
     
-    func anchor(height: CGFloat? = nil, width: CGFloat? = nil, top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0) {
+    func anchor(height: CGFloat? = nil,
+                width: CGFloat? = nil,
+                top: NSLayoutYAxisAnchor? = nil,
+                left: NSLayoutXAxisAnchor? = nil,
+                bottom: NSLayoutYAxisAnchor? = nil,
+                right: NSLayoutXAxisAnchor? = nil,
+                topConstant: CGFloat = 0,
+                leftConstant: CGFloat = 0,
+                bottomConstant: CGFloat = 0,
+                rightConstant: CGFloat = 0) {
         
         translatesAutoresizingMaskIntoConstraints = false
         
+        //////
         if let height = height {
             heightAnchor.constraint(equalToConstant: height).isActive = true
         }
@@ -22,6 +32,7 @@ extension UIView {
             widthAnchor.constraint(equalToConstant: width).isActive = true
         }
         
+        //////
         if let top = top {
             topAnchor.constraint(equalTo: top, constant: topConstant).isActive = true
         }
@@ -39,4 +50,7 @@ extension UIView {
         }
         
     }
+    
+   
+    
 }

@@ -33,6 +33,7 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         stopVid = false
+        self.setBackButtonTitle("")
     }
     
     //stop video play when navigating back to playlist list
