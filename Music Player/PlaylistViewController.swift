@@ -13,8 +13,16 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
     
     @IBOutlet weak var container: UIView!
     var playlist: Playlist!
-    var player : Player!
-    var playlistName : String!
+    var player: Player!
+    var playlistName: String!
+    var stopVid: Bool!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
+        //allow swipe left to right to go back
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,15 +35,7 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
         stopVid = false
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
-        //allow swipe left to right to go back
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-    }
-    
     //stop video play when navigating back to playlist list
-    var stopVid : Bool!
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if(self.isMovingFromParentViewController || self.isBeingDismissed){
@@ -53,20 +53,15 @@ class PlaylistViewController: UIViewController, PlaylistViewControllerDelegate {
         }
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         //initialize playlist container
-        if(segue.identifier == "showPlaylist")
-        {
+        if(segue.identifier == "showPlaylist"){
             let navController = segue.destination as! UINavigationController
             playlist = navController.viewControllers[0] as! Playlist
             playlist.playlistName = playlistName
             playlist.playlistVCDelegate = self
-            
         }
         
         //initialize avPlayer container

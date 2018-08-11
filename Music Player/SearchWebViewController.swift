@@ -25,16 +25,19 @@ class SearchWebViewController: UIViewController, YouTubeSearchWebViewDelegate {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
+    
     required init?(coder aDecoder: NSCoder) {
         self.webView = YouTubeSearchWebView()
         super.init(coder: aDecoder)
         setup()
     }
+    
     init() {
         self.webView = YouTubeSearchWebView()
         super.init(nibName: nil, bundle: nil)
         setup()
     }
+    
     fileprivate func setup() {
         webView.delegate = self
     }

@@ -402,7 +402,7 @@ class Playlist: UITableViewController, UISearchResultsUpdating, PlaylistDelegate
         
         let curSongs = getCurSongs()
         let predicate = NSPredicate(format: "title CONTAINS[c] %@", searchController.searchBar.text!)
-        filteredSongs = curSongs.filtered(using: predicate) as NSArray!
+        filteredSongs = curSongs.filtered(using: predicate) as NSArray?
         tableView.reloadData()
         
         
@@ -812,6 +812,7 @@ class Playlist: UITableViewController, UISearchResultsUpdating, PlaylistDelegate
         }
         
     }
+    
     func enableVidTracks(){
         
         let curItem = playerQueue.currentItem
